@@ -28,7 +28,7 @@ class Streaming_API {
 		"header" => "Content-Type: application/json",
 		"content" => $url
 		)));
-		$get_data = file_get_contents("euro_dance.json", false, $context);
+        $get_data = file_get_contents("euro_dance.json", false, $context);
         $data = json_decode($get_data); // for foreach
         //$data = xmlrpc_decode($get_data); // xmlrpc OUT IN PHP8
         return $data;
