@@ -1,2 +1,2 @@
-# Example_Streaming_API_Class
-Example Streaming API Class
+# Example Streaming API Class
+Example GET Data
