@@ -14,7 +14,7 @@ class Streaming_API {
     public function __call($method, $params) {
         $params = array_merge(array($this->_username, $this->_password), $params);
         //$request = xmlrpc_encode_request($method, $params); // xmlrpc_encode_request OUT IN PHP8
-		$request = json_encode(array($method, $params)); // EXTRA
+        $request = json_encode(array($method, $params)); // EXTRA
         return $this->get_data($request);
     }
 
@@ -30,7 +30,7 @@ class Streaming_API {
 		)));
 		$get_data = file_get_contents("euro_dance.json", false, $context);
         $data = json_decode($get_data); // for foreach
-		//$data = xmlrpc_decode($get_data); // xmlrpc OUT IN PHP8
+        //$data = xmlrpc_decode($get_data); // xmlrpc OUT IN PHP8
         return $data;
     }
 }
