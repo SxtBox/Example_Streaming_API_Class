@@ -7,9 +7,9 @@ function get_data($url) {
 		"header" => "Content-Type: application/json",
 		"content" => $url
 		)));
-		$get_data = file_get_contents("euro_dance.json", false, $context);
+        $get_data = file_get_contents("euro_dance.json", false, $context);
         $data = $get_data;
-		//$data = json_decode($get_data); // for foreach
+        //$data = json_decode($get_data); // for foreach
         return $data;
     }
 
